@@ -1,0 +1,30 @@
+{
+  "name": "w3d.js",
+  "version": "1.0.0",
+  "author": "Wu-Qin-Hao",
+  "license": "MIT",
+  "description": "JavaScript 3D Library（自研webGL3D引擎）",
+  "keywords": [
+    "w3d"
+  ],
+  "type": "module",
+  "files": [
+    "dist",
+    "index.d.ts"
+  ],
+  "main": "./dist/w3d.umd.cjs",
+  "module": "./dist/w3d.js",
+  "types": "./index.d.ts",
+  "exports": {
+    "types": "./index.d.ts",
+    "import": "./dist/w3d.js",
+    "require": "./dist/w3d.umd.cjs"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "devDependencies": {
+    "vite": "^4.0.0"
+  }
+}
