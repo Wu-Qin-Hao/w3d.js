@@ -13,6 +13,9 @@ function main() {
   const rgb = { r: 0.2, g: 0.7, b: 0.1 };
   geometry.setAttribColor(rgb);
 
+  const translation = [100, 100];
+  geometry.setTranslation(translation);
+
   renderArea.render();
 }
 
