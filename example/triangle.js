@@ -16,6 +16,9 @@ function main() {
   const translation = [100, 100];
   geometry.setTranslation(translation);
 
+  const angle = 30;
+  geometry.setRotation(angle);
+
   renderArea.render();
 }
 
