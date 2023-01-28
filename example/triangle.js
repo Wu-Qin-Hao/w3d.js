@@ -19,6 +19,9 @@ function main() {
   const angle = 30;
   geometry.setRotation(angle);
 
+  const scale = [2, 1];
+  geometry.setScale(scale);
+
   renderArea.render();
 }
 
