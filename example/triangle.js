@@ -14,13 +14,20 @@ function main() {
   geometry.setAttribColor(rgb);
 
   const translation = [100, 100];
-  geometry.setTranslation(translation);
+  // geometry.setTranslation(translation);
 
   const angle = 30;
-  geometry.setRotation(angle);
+  // geometry.setRotation(angle);
 
-  const scale = [2, 1];
-  geometry.setScale(scale);
+  const scale = [1, 1];
+  // geometry.setScale(scale);
+
+  let m3 = new w3d.Matrix3();
+  let matrix = m3.identity();
+  matrix = m3.translate(matrix, translation[0], translation[1]);
+  matrix = m3.rotate(matrix, angle);
+  matrix = m3.scale(matrix, scale[0], scale[1]);
+  geometry.setMatrix(matrix);
 
   renderArea.render();
 }
