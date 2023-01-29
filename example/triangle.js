@@ -23,7 +23,8 @@ function main() {
   // geometry.setScale(scale);
 
   let m3 = new w3d.Matrix3();
-  let matrix = m3.identity();
+  // let matrix = m3.identity();
+  let matrix = m3.projection(canvas.clientWidth, canvas.clientHeight);
   matrix = m3.translate(matrix, translation[0], translation[1]);
   matrix = m3.rotate(matrix, angle);
   matrix = m3.scale(matrix, scale[0], scale[1]);
