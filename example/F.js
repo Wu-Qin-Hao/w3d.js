@@ -134,7 +134,15 @@ function main() {
   const scale = [1, 1, 1];
 
   let m4 = new w3d.Matrix4();
-  let matrix = m4.projection(canvas.clientWidth, canvas.clientHeight, 400);
+
+  var left = 0;
+  var right = canvas.clientWidth;
+  var bottom = canvas.clientHeight;
+  var top = 0;
+  var near = 400;
+  var far = -400;
+  let matrix = m4.orthographic(left, right, bottom, top, near, far);
+
   matrix = m4.translate(matrix, translation[0], translation[1], translation[2]);
   matrix = m4.xRotate(matrix, rotation[0]);
   matrix = m4.yRotate(matrix, rotation[1]);
