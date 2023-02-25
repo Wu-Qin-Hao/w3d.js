@@ -125,7 +125,7 @@ function main() {
   ];
   geometry.setAttribColor(rgb);
 
-  const translation = [500, 100, 0];
+  const translation = [500, 100, -300];
   var rotation = [
     (40 * Math.PI) / 180,
     (25 * Math.PI) / 180,
@@ -142,6 +142,9 @@ function main() {
   var near = 400;
   var far = -400;
   let matrix = m4.orthographic(left, right, bottom, top, near, far);
+
+  let makeZToWMatrix = m4.makeZToWMatrix(0);
+  matrix = m4.multiply(matrix, makeZToWMatrix);
 
   matrix = m4.translate(matrix, translation[0], translation[1], translation[2]);
   matrix = m4.xRotate(matrix, rotation[0]);
