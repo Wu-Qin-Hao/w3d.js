@@ -123,4 +123,37 @@ void gl.linkProgram(program);
 void gl.useProgram(program);
 ```
 
+8. gl.getAttribLocation
+
+```js
+/**
+ * 返回了给定WebGLProgram对象中某属性的下标指向位置
+ * @param {*} program 一个包含了属性参数的 WebGLProgram 对象
+ * @param {*} name 需要获取下标指向位置的 DOMString 属性参数名
+ */
+GLint gl.getAttribLocation(program, name);
+```
+
+9. gl.vertexAttrib4f
+
+```js
+/**
+ * 为顶点 attibute 变量赋值
+ * @param {*} index 指定待修改顶点 attribute 变量的存储位置(前面 getAttribLocation 返回的值)
+ * @param {*} v0 Number 类型，设置顶点 attibute 变量的各分量值
+ */
+void gl.vertexAttrib1f(index, v0);
+void gl.vertexAttrib2f(index, v0, v1);
+void gl.vertexAttrib3f(index, v0, v1, v2);
+void gl.vertexAttrib4f(index, v0, v1, v2, v3);
+
+/**
+ * @param {*} value Float32Array 类型，设置顶点 attibute 变量的向量值
+ */
+void gl.vertexAttrib1fv(index, value);
+void gl.vertexAttrib2fv(index, value);
+void gl.vertexAttrib3fv(index, value);
+void gl.vertexAttrib4fv(index, value);
+```
+
 // --------------------------------------------着色器相关------------------------------------
